@@ -1,0 +1,942 @@
+@charset 'UTF-8';
+
+//Importar alguma fonte que goste
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+// -------Cores novas------- //
+// Grafite: #222222
+// Laranja: #D46924
+// Outro Laranja: #F65B17
+// Laranja claro: #FFB26A
+// Branco: #F1F1F1
+// Preta: #000000
+
+// -------Cores velhas------- //
+// $hd-color: #1a0033;
+// $border-color: #c2c2c2;
+// $important-text: #9a00c4;
+// $text-color: #fff;
+// $text-color-hover: #1a0033;
+
+$color-1: #222222;
+$color-2: #D46924;
+$color-3: #F65B17;
+$color-4: #FFB26A;
+$color-5: #F1F1F1;
+$color-6: #000000;
+
+body {
+    min-width: 100%;
+    min-height: 100%;
+    background: $color-6;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    min-height: 5%;
+    background: $color-1;
+    border-bottom: 2px solid $color-3;
+
+
+    .nav-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        .logo{
+            a {
+                font-size: 20px;
+                font-weight: 700;
+                text-decoration: none;
+                color: $color-2;
+            }
+        }
+
+        .nav-list {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .nav-link {
+                margin: 0 .4em;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                
+                a {
+                    padding: 1em;
+                    color: $color-5;
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    transition: all .1s ease-in-out;
+                }
+
+                a:hover {
+                    background: $color-5;
+                    color: $color-3;
+                    transition: all .1s ease;
+                }
+            }
+        }
+    }
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    background: $color-1;
+
+    .resume-me {
+        width: 100%;
+        padding: 7em 0;
+        border-bottom: 2px solid $color-3;
+        background: $color-6;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .photo-left {
+            img {
+                width: 200px;
+                padding: .3em;
+                border: 3px solid $color-3;
+                border-radius: 50%;
+            }
+        }
+
+        .text-right {
+            margin-left: 1em;
+
+            p {
+                color: $color-5;
+                font-size: 20px;
+            }
+
+            p span.cursor {
+                display: inline-block;
+                background-color: $color-5;
+                margin-left: 0.1rem;
+                width: 3px;
+                animation: blink 1s infinite;
+            }
+
+            p span.cursor.typing {
+                animation: none;
+            }
+
+            @keyframes blink {
+                0%  { background-color: $color-5; }
+                49% { background-color: $color-5; }
+                50% { background-color: transparent; }
+                99% { background-color: transparent; }
+                100%  { background-color: $color-5; }
+            }
+        }
+    }
+
+    .about-me {
+        width: 100%;
+        padding: 5em 0;
+        border-bottom: 2px solid $color-3;
+        background: $color-1;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        h2 {
+            color: $color-3;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 100%;
+            margin-bottom: 1em;
+        }
+        
+        .text {
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            ul {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                li {
+                    list-style-type: none;
+                    color: $color-5;
+                    margin: .2em 0;
+
+                    p {
+                        color: $color-5;
+                        text-indent: 1.3em;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        
+        .image {
+            img {
+                margin: 1em 0;
+                width: 300px;
+            }
+        }
+    }
+
+    .skills {
+        width: 100%;
+        padding: 4em 0;
+        border-bottom: 2px solid $color-3;
+        background: $color-6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .title-skill {
+            margin: 1em 0;
+
+            h2 {
+                text-align: center;
+                color: $color-3;
+            }
+        }
+
+        .list-skills {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: self-start;
+
+            .list {
+                color: $color-5;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                ul {
+                    margin: 0 1em;
+                
+                    li {
+                        list-style-type: none;
+
+                        p {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+
+                            svg {
+                                width: 30px; 
+                                height: 30px;  
+                                margin-bottom: .3em;
+                                margin-right: .3em;      
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .button-projects {
+            margin: 1em 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                padding: .5em;
+                color: $color-5;
+                border: 3px solid $color-5;
+                border-radius: 5px;
+                text-decoration: none;
+                border-radius: 10px;
+            }
+
+            a:hover {
+                background: $color-5;
+                color: $color-3;
+                transition: all .1s ease;
+            }
+        }
+    }
+
+    .contact {
+        width: 100%;
+        padding: 3em 1.5em;
+        border-bottom: 2px solid $color-3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .contact-title {
+            width: 100%;
+            
+            h2 {
+                text-align: center;
+                color: $color-3;
+                margin-bottom: 1em;
+            }
+        }
+
+        .send-email {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+                width: 100%;
+                margin: .3em 0;
+                text-align: center;
+                color: $color-5;
+            }
+
+            .button-email {
+                width: 100%;
+                margin-top: .4em;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    font-size: 16px;
+                    padding: .5em;
+                    color: $color-5;
+                    text-align: center;
+                    text-decoration: none;
+                    border: 3px solid $color-5;
+                    border-radius: 5px;
+                }
+
+                a:hover {
+                    background: $color-5;
+                    color: $color-3;
+                    transition: all .1s ease;
+                }
+            }
+
+            .link-git {
+                width: 100%;
+                margin-top: .4em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .list-link-git {
+                    li {
+                        list-style-type: none;
+
+                        a {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            margin-bottom: .2em;
+                            font-size: 16px;
+                            font-weight: 700;
+                            color: $color-5;
+                            text-align: center;
+                            text-decoration: none;
+                            border: 2px solid transparent;
+                            border-radius: 15px;
+
+                            svg {
+                                margin-right: .2em;
+                            }
+                        }
+        
+                        a:hover {
+                            color: $color-3;
+                            transition: all .1s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    min-height: 5%;
+    padding: 1em 3em;
+    background: $color-6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .logo{  
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        a {
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            color: $color-3;
+        }
+    }
+
+    .medias {
+        width: 100%;
+
+        .icons {
+            li {
+                list-style-type: none;
+                margin: .4em;
+
+                a {
+                    height: 100%;
+                    color: $color-5;
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    transition: all .1s ease-in-out;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                a:hover {
+                    color: $color-3;
+                    transition: all .1s ease;
+                }
+            }
+        }
+    }
+
+    .copy{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        p {
+            color: $color-4;
+        }
+    }
+}
+
+// Responsividade
+
+@media (max-width: 557px) {
+    header {
+        .nav-bar{
+            .logo{
+                color: $color-5;
+
+                p {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+
+    main{
+        .resume-me {
+            .photo-left {
+                img {
+                    width: 160px;
+                }
+            }
+    
+            .text-right {
+                p {
+                    color: $color-5;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .about-me {
+            h2 {
+                font-size: 23px;
+            }
+            
+            .text {
+                ul {
+                    li {  
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            
+            .image {
+                img {
+                    margin: 2em 0;
+                    width: 300px;
+                }
+            }
+        }
+        
+        .skills {
+            .title-skill {
+                h2 {
+                    font-size: 23px;
+                }
+            }
+    
+            .list {  
+                margin-bottom: .5em;
+
+                h3 {
+                    font-size: 16px;
+                }
+
+                li {
+                    p {
+                        svg {
+                            width: 25px; 
+                            height: 25px;     
+                        }
+                    }
+                }
+            }
+    
+            .button-projects {
+                a {
+                    padding: .8em;
+                }
+            }
+        }
+
+        .contact {
+            h3 {
+                font-size: 16px;
+            }
+
+            a{
+                font-size: 16px;
+            }
+        }
+    }
+
+    footer {
+        p {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 488px) {
+    main {
+        .resume-me {
+            .photo-left {
+                img {
+                    width: 140px;
+                }
+            }
+
+            .text-right {
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .about-me {
+            h2 {
+                font-size: 20px;
+            }
+            
+            .text {
+                ul {
+                    li {  
+                        p {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            
+            .image {
+                img {
+                    margin: 2em 0;
+                    width: 250px;
+                }
+            }
+        }
+        
+        .skills {
+            .title-skill {
+                h2 {
+                    font-size: 20px;
+                }
+            }
+    
+            .list-skills {
+                margin-bottom: .5em;
+
+                h3 {
+                    font-size: 14px;
+                }
+
+                li {
+                    p {
+                        font-size: 14px;
+
+                        svg {
+                            width: 25px; 
+                            height: 25px;     
+                        }
+                    }
+                }
+            }
+    
+            .button-projects {
+                a {
+                    padding: .6em;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    header {
+        .nav-bar{
+            .logo {
+                a {
+                    font-size: 16px;
+                }
+            }
+
+            .nav-list {
+                .nav-link {
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        .resume-me {
+            .photo-left {
+                img {
+                    width: 100px;
+                }
+            }
+
+            .text-right {
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .about-me {
+            padding: 3em 0;
+
+            h2 {
+                font-size: 16px;
+            }
+
+            .text {
+                .list {
+                    .item-list {
+                        p {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+
+            .image {
+                img {
+                    width: 200px;
+                }
+            }
+        }
+
+        .skills {
+            .title-skill {
+                h2 {
+                    font-size: 16px;
+                }
+                
+                .list-skills {
+                    .list {      
+                        ul { 
+                            margin: 0 1em;      
+                            li {
+                                p {
+                                    svg {
+                                        width: 20px; 
+                                        height: 20px;  
+                                        margin-bottom: .3em;
+                                        margin-right: .3em;      
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .button-projects {
+                a {
+                    padding: .8em;
+                    font-size: 12px !important;
+                }
+            }
+        }
+
+        .contact {
+            .contact-title {
+                h2 {
+                    font-size: 16px;
+                }
+            }
+
+            .send-email {
+                h3 {
+                    font-size: 14px;
+                }
+
+                .button-email {
+                    a {
+                        font-size: 12px;
+                    }
+                }
+
+                .link-git {
+                    .list-link-git {
+                        li {
+                            a {
+                                font-size: 10px !important;
+
+                                svg {
+                                    width: 10px !important;
+                                    height: 10px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .logo{
+            a {
+                font-size: 20px;
+                font-weight: 700;
+                text-decoration: none;
+                color: $color-2;
+            }
+        }
+
+        .medias {
+            .icons {
+                .icon {
+                    a {
+                        font-size: 12px;
+
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .copy {
+            p {
+                font-size: 10px;
+                color: $color-4;
+            }
+        }
+    }
+}
+
+@media (max-width: 322px) {
+    header {
+        .nav-bar{
+            .logo {
+                a {
+                    font-size: 14px;
+                }
+            }
+
+            .nav-list {
+                .nav-link {
+                    margin: 0 .2em;
+
+                    a {
+                        padding: 1em .8em;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        .resume-me {
+            .photo-left {
+                img {
+                    width: 80px;
+                }
+            }
+
+            .text-right {
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .about-me {
+            padding: 3em 0;
+
+            h2 {
+                font-size: 14px;
+            }
+
+            .text {
+                .list {
+                    .item-list {
+                        p {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+
+            .image {
+                img {
+                    width: 200px;
+                }
+            }
+        }
+
+        .skills {
+            .title-skill {
+                h2 {
+                    font-size: 14px;
+                }
+                
+                .list-skills {
+                    .list {      
+                        ul { 
+                            margin: 0 1em;      
+                            li {
+                                p {
+                                    svg {
+                                        width: 10px; 
+                                        height: 10px;  
+                                        margin-bottom: .3em;
+                                        margin-right: .3em;      
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .button-projects {
+                a {
+                    padding: .8em;
+                    font-size: 12px !important;
+                }
+            }
+        }
+
+        .contact {
+            .contact-title {
+                h2 {
+                    font-size: 14px;
+                }
+            }
+
+            .send-email {
+                h3 {
+                    font-size: 12px;
+                }
+
+                .button-email {
+                    a {
+                        font-size: 12px;
+                    }
+                }
+
+                .link-git {
+                    .list-link-git {
+                        li {
+                            a {
+                                font-size: 10px !important;
+
+                                svg {
+                                    width: 15px !important;
+                                    height: 15px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .logo {
+            a {
+                font-size: 14px;
+            }
+        }
+
+        .medias {
+            .icons {
+                .icon {
+                    a {
+                        font-size: 10px;
+
+                        svg {
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .copy {
+            p {
+                font-size: 8px;
+            }
+        }
+    }
+}
