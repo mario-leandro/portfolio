@@ -3,14 +3,6 @@
 //Importar alguma fonte que goste
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    scroll-behavior: smooth;
-}
-
 // -------Cores novas------- //
 // Grafite: #222222
 // Laranja: #D46924
@@ -32,6 +24,14 @@ $color-3: #F65B17;
 $color-4: #FFB26A;
 $color-5: #F1F1F1;
 $color-6: #000000;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    scroll-behavior: smooth;
+}
 
 body {
     min-width: 100%;
@@ -157,7 +157,7 @@ main {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
 
         h2 {
             color: $color-3;
@@ -192,13 +192,6 @@ main {
                         font-size: 16px;
                     }
                 }
-            }
-        }
-        
-        .image {
-            img {
-                margin: 1em 0;
-                width: 300px;
             }
         }
     }
@@ -303,51 +296,27 @@ main {
             }
         }
 
-        .send-email {
+        .division {
             width: 100%;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: self-start;
 
-            h3 {
-                width: 100%;
-                margin: .3em 0;
-                text-align: center;
-                color: $color-5;
-            }
-
-            .button-email {
-                width: 100%;
-                margin-top: .4em;
+            .left-part {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
 
-                a {
-                    font-size: 16px;
-                    padding: .5em;
-                    color: $color-5;
-                    text-align: center;
-                    text-decoration: none;
-                    border: 3px solid $color-5;
-                    border-radius: 5px;
-                }
-
-                a:hover {
-                    background: $color-5;
+                h3 {
                     color: $color-3;
-                    transition: all .1s ease;
+                    margin-top: 13px;
                 }
-            }
 
-            .link-git {
-                width: 100%;
-                margin-top: .4em;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+                p {
+                    color: $color-5;
+                }
 
                 .list-link-git {
                     li {
@@ -356,7 +325,7 @@ main {
                         a {
                             display: flex;
                             flex-direction: row;
-                            justify-content: center;
+                            align-items: center;
                             margin-bottom: .2em;
                             font-size: 16px;
                             font-weight: 700;
@@ -378,6 +347,30 @@ main {
                     }
                 }
             }
+
+            .right-part {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .curriculum {
+                    h3 {
+                        margin-top: 13px;
+                        color: $color-3;
+                    }
+
+                    a {
+                        color: $color-5;
+                        text-decoration: none;
+                    }
+
+                    a:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
         }
     }
 }
@@ -385,17 +378,16 @@ main {
 footer {
     width: 100%;
     min-height: 5%;
-    padding: 1em 3em;
+    padding: 1em;
     background: $color-6;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 
     .logo{  
-        width: 100%;
-        display: flex;
-        justify-content: center;
+        width: 30%;
+        text-align: center;
 
         a {
             font-size: 20px;
@@ -406,15 +398,18 @@ footer {
     }
 
     .medias {
-        width: 100%;
-
+        width: 30%;
         .icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
             li {
                 list-style-type: none;
-                margin: .4em;
+                margin: 0 .12em;
 
                 a {
-                    height: 100%;
                     color: $color-5;
                     font-size: 16px;
                     font-weight: 600;
@@ -422,6 +417,7 @@ footer {
                     transition: all .1s ease-in-out;
                     display: flex;
                     justify-content: center;
+                    align-items: center;
                 }
 
                 a:hover {
@@ -433,11 +429,12 @@ footer {
     }
 
     .copy{
-        width: 100%;
+        width: 30%;
         display: flex;
         justify-content: center;
         p {
             color: $color-4;
+            font-size: 10px;
         }
     }
 }
@@ -529,19 +526,65 @@ footer {
         }
 
         .contact {
-            h3 {
-                font-size: 16px;
+            .contact-title {
+                h2 {
+                    font-size: 23px;
+                }
             }
 
-            a{
-                font-size: 16px;
+            .division {
+                .left-part {
+                    h3 {
+                        font-size: 14px;
+                    }
+
+                    p {
+                        font-size: 12px;
+                    }
+
+                    .links {
+                        .list-link-git {
+                            a {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+
+                .right-part {
+                    h3 {
+                        font-size: 14px;
+                    }
+
+                    a {
+                        font-size: 12px;
+                    }
+                }
             }
         }
     }
 
     footer {
-        p {
-            font-size: 12px;
+        .copy {
+            p { 
+                font-size: 8px;
+            }
+        }
+
+        .logo {
+            a {
+                font-size: 16px;
+            }
+        }
+
+        .medias {
+            .icons {
+                li {
+                    a {
+                        font-size: 12px;
+                    }
+                }
+            }
         }
     }
 }
@@ -576,13 +619,6 @@ footer {
                     }
                 }
             }
-            
-            .image {
-                img {
-                    margin: 2em 0;
-                    width: 250px;
-                }
-            }
         }
         
         .skills {
@@ -614,6 +650,68 @@ footer {
             .button-projects {
                 a {
                     padding: .6em;
+                }
+            }
+        }
+
+        .contact {
+            .contact-title {
+                h2 {
+                    font-size: 20px;
+                }
+            }
+
+            .division {
+                .left-part {
+                    h3 {
+                        font-size: 14px;
+                    }
+
+                    p {
+                        font-size: 12px;
+                    }
+
+                    .links {
+                        .list-link-git {
+                            a {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+
+                .right-part {
+                    h3 {
+                        font-size: 14px;
+                    }
+
+                    a {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .copy {
+            p {
+                font-size: 8px;
+            }
+        }
+
+        .logo {
+            a {
+                font-size: 14px;
+            }
+        }
+
+        .medias {
+            .icons {
+                li {
+                    a {
+                        font-size: 10px;
+                    }
                 }
             }
         }
@@ -670,12 +768,6 @@ footer {
                     }
                 }
             }
-
-            .image {
-                img {
-                    width: 200px;
-                }
-            }
         }
 
         .skills {
@@ -718,29 +810,32 @@ footer {
                 }
             }
 
-            .send-email {
-                h3 {
-                    font-size: 14px;
-                }
-
-                .button-email {
-                    a {
+            .division {
+                .left-part {
+                    h3 {
                         font-size: 12px;
+                    }
+
+                    p {
+                        font-size: 10px;
+                    }
+
+                    .links {
+                        .list-link-git {
+                            a {
+                                font-size: 10px;
+                            }
+                        }
                     }
                 }
 
-                .link-git {
-                    .list-link-git {
-                        li {
-                            a {
-                                font-size: 10px !important;
+                .right-part {
+                    h3 {
+                        font-size: 12px;
+                    }
 
-                                svg {
-                                    width: 10px !important;
-                                    height: 10px !important;
-                                }
-                            }
-                        }
+                    a {
+                        font-size: 10px;
                     }
                 }
             }
@@ -748,34 +843,29 @@ footer {
     }
 
     footer {
-        .logo{
+        .copy {
+            p {
+                font-size: 6px;
+            }
+        }
+
+        .logo {
             a {
-                font-size: 20px;
-                font-weight: 700;
-                text-decoration: none;
-                color: $color-2;
+                font-size: 12px;
             }
         }
 
         .medias {
             .icons {
-                .icon {
+                li {
                     a {
-                        font-size: 12px;
+                        font-size: 8px;
 
                         svg {
-                            width: 20px;
-                            height: 20px;
+                            width: 14px;
                         }
                     }
                 }
-            }
-        }
-
-        .copy {
-            p {
-                font-size: 10px;
-                color: $color-4;
             }
         }
     }
@@ -834,12 +924,6 @@ footer {
                     }
                 }
             }
-
-            .image {
-                img {
-                    width: 200px;
-                }
-            }
         }
 
         .skills {
@@ -874,68 +958,32 @@ footer {
                 }
             }
         }
-
-        .contact {
-            .contact-title {
-                h2 {
-                    font-size: 14px;
-                }
-            }
-
-            .send-email {
-                h3 {
-                    font-size: 12px;
-                }
-
-                .button-email {
-                    a {
-                        font-size: 12px;
-                    }
-                }
-
-                .link-git {
-                    .list-link-git {
-                        li {
-                            a {
-                                font-size: 10px !important;
-
-                                svg {
-                                    width: 15px !important;
-                                    height: 15px !important;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 
     footer {
+        .copy {
+            p {
+                font-size: 5px;
+            }
+        }
+
         .logo {
             a {
-                font-size: 14px;
+                font-size: 10px;
             }
         }
 
         .medias {
             .icons {
-                .icon {
+                li {
                     a {
-                        font-size: 10px;
+                        font-size: 8px;
 
                         svg {
-                            width: 15px;
-                            height: 15px;
+                            width: 14px;
                         }
                     }
                 }
-            }
-        }
-
-        .copy {
-            p {
-                font-size: 8px;
             }
         }
     }

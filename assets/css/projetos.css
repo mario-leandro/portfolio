@@ -182,17 +182,16 @@ main .project-parts .card-proj .card .icons {
 footer {
   width: 100%;
   min-height: 5%;
-  padding: 1em 3em;
+  padding: 1em;
   background: #000000;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 footer .logo {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  width: 30%;
+  text-align: center;
 }
 footer .logo a {
   font-size: 20px;
@@ -201,33 +200,40 @@ footer .logo a {
   color: #F65B17;
 }
 footer .medias {
-  width: 100%;
+  width: 30%;
+}
+footer .medias .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 footer .medias .icons li {
   list-style-type: none;
-  margin: 0.4em;
+  margin: 0 0.12em;
 }
 footer .medias .icons li a {
-  height: 100%;
   color: #F1F1F1;
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 footer .medias .icons li a:hover {
   color: #F65B17;
   transition: all 0.1s ease;
 }
 footer .copy {
-  width: 100%;
+  width: 30%;
   display: flex;
   justify-content: center;
 }
 footer .copy p {
   color: #FFB26A;
+  font-size: 10px;
 }
 
 @media (max-width: 557px) {
@@ -237,8 +243,14 @@ footer .copy p {
   header .nav-bar .logo a {
     font-size: 20px;
   }
+  footer .copy p {
+    font-size: 8px;
+  }
   footer .logo a {
-    font-size: 20px;
+    font-size: 16px;
+  }
+  footer .medias .icons li a {
+    font-size: 12px;
   }
 }
 @media (max-width: 420px) {
@@ -271,18 +283,74 @@ footer .copy p {
   main .project-parts .card-proj .card .icons svg {
     width: 40px;
   }
-  footer .logo a {
+}
+@media (max-width: 420px) and (max-width: 420px) {
+  header .nav-bar .logo a {
     font-size: 16px;
   }
-  footer .medias .icons .icon a {
+  header .nav-bar .nav-list .nav-link a {
+    font-size: 14px;
+  }
+  main .resume-me .photo-left img {
+    width: 100px;
+  }
+  main .resume-me .text-right p {
     font-size: 12px;
   }
-  footer .medias .icons .icon a svg {
+  main .about-me {
+    padding: 3em 0;
+  }
+  main .about-me h2 {
+    font-size: 16px;
+  }
+  main .about-me .text .list .item-list p {
+    font-size: 12px;
+  }
+  main .skills .title-skill h2 {
+    font-size: 16px;
+  }
+  main .skills .title-skill .list-skills .list ul {
+    margin: 0 1em;
+  }
+  main .skills .title-skill .list-skills .list ul li p svg {
     width: 20px;
     height: 20px;
+    margin-bottom: 0.3em;
+    margin-right: 0.3em;
+  }
+  main .skills .button-projects a {
+    padding: 0.8em;
+    font-size: 12px !important;
+  }
+  main .contact .contact-title h2 {
+    font-size: 16px;
+  }
+  main .contact .division .left-part h3 {
+    font-size: 12px;
+  }
+  main .contact .division .left-part p {
+    font-size: 10px;
+  }
+  main .contact .division .left-part .links .list-link-git a {
+    font-size: 10px;
+  }
+  main .contact .division .right-part h3 {
+    font-size: 12px;
+  }
+  main .contact .division .right-part a {
+    font-size: 10px;
   }
   footer .copy p {
-    font-size: 10px;
+    font-size: 6px;
+  }
+  footer .logo a {
+    font-size: 12px;
+  }
+  footer .medias .icons li a {
+    font-size: 8px;
+  }
+  footer .medias .icons li a svg {
+    width: 14px;
   }
 }
 @media (max-width: 322px) {
@@ -319,17 +387,16 @@ footer .copy p {
   main .project-parts .card-proj .card .icons svg {
     width: 30px;
   }
-  footer .logo a {
-    font-size: 14px;
+  footer .copy p {
+    font-size: 5px;
   }
-  footer .medias .icons .icon a {
+  footer .logo a {
     font-size: 10px;
   }
-  footer .medias .icons .icon a svg {
-    width: 15px;
-    height: 15px;
-  }
-  footer .copy p {
+  footer .medias .icons li a {
     font-size: 8px;
+  }
+  footer .medias .icons li a svg {
+    width: 14px;
   }
 }/*# sourceMappingURL=projetos.css.map */
