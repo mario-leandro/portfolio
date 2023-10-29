@@ -1,0 +1,22 @@
+// -------Cores velhas ------- //
+// Grafite: #222222
+// Laranja: #D46924
+// Outro Laranja: #F65B17
+// Laranja claro: #FFB26A
+// Branco: #F1F1F1
+// Preta: #000000
+
+// -------Cores velhas ------- //
+// $hd-color: #1a0033;
+// $border-color: #c2c2c2;
+// $important-text: #9a00c4;
+// $text-color: #fff;
+// $text-color-hover: #1a0033;
+
+// -------Cores novas------- //
+// $color-1: #411D67;
+//
+//
+//
+//
+//

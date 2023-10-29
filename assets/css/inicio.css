@@ -10,16 +10,14 @@
 body {
   min-width: 100%;
   min-height: 100%;
-  background: #000000;
+  background: #f5f5f5;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  position: relative;
 }
 
 header {
   width: 100%;
-  min-height: 5%;
-  background: #222222;
-  border-bottom: 2px solid #F65B17;
+  background: #f5f5f5;
+  border-bottom: 2px solid #411D67;
 }
 header .nav-bar {
   display: flex;
@@ -31,7 +29,7 @@ header .nav-bar .logo a {
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
-  color: #D46924;
+  color: #7300ff;
 }
 header .nav-bar .nav-list {
   list-style-type: none;
@@ -48,28 +46,27 @@ header .nav-bar .nav-list .nav-link {
 }
 header .nav-bar .nav-list .nav-link a {
   padding: 1em;
-  color: #F1F1F1;
+  color: #7300ff;
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.1s ease-in-out;
 }
 header .nav-bar .nav-list .nav-link a:hover {
-  background: #F1F1F1;
-  color: #F65B17;
+  background: #7300ff;
+  color: #f5f5f5;
   transition: all 0.1s ease;
 }
 
 main {
   width: 100%;
   height: 100%;
-  background: #222222;
+  background: #f5f5f5;
 }
 main .resume-me {
   width: 100%;
   padding: 7em 0;
-  border-bottom: 2px solid #F65B17;
-  background: #000000;
+  background: #f5f5f5;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -78,19 +75,19 @@ main .resume-me {
 main .resume-me .photo-left img {
   width: 200px;
   padding: 0.3em;
-  border: 3px solid #F65B17;
+  border: 3px solid #7300ff;
   border-radius: 50%;
 }
 main .resume-me .text-right {
   margin-left: 1em;
 }
 main .resume-me .text-right p {
-  color: #F1F1F1;
+  color: #7300ff;
   font-size: 20px;
 }
 main .resume-me .text-right p span.cursor {
   display: inline-block;
-  background-color: #F1F1F1;
+  background-color: #7300ff;
   margin-left: 0.1rem;
   width: 3px;
   animation: blink 1s infinite;
@@ -100,10 +97,10 @@ main .resume-me .text-right p span.cursor.typing {
 }
 @keyframes blink {
   0% {
-    background-color: #F1F1F1;
+    background-color: #7300ff;
   }
   49% {
-    background-color: #F1F1F1;
+    background-color: #7300ff;
   }
   50% {
     background-color: transparent;
@@ -112,21 +109,20 @@ main .resume-me .text-right p span.cursor.typing {
     background-color: transparent;
   }
   100% {
-    background-color: #F1F1F1;
+    background-color: #7300ff;
   }
 }
 main .about-me {
   width: 100%;
   padding: 5em 0;
-  border-bottom: 2px solid #F65B17;
-  background: #222222;
+  background: #dedede;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 main .about-me h2 {
-  color: #F65B17;
+  color: #7300ff;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -148,19 +144,17 @@ main .about-me .text ul {
 }
 main .about-me .text ul li {
   list-style-type: none;
-  color: #F1F1F1;
   margin: 0.2em 0;
 }
 main .about-me .text ul li p {
-  color: #F1F1F1;
+  color: #411D67;
   text-indent: 1.3em;
   font-size: 16px;
 }
 main .skills {
   width: 100%;
   padding: 4em 0;
-  border-bottom: 2px solid #F65B17;
-  background: #000000;
+  background: #f5f5f5;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -171,7 +165,7 @@ main .skills .title-skill {
 }
 main .skills .title-skill h2 {
   text-align: center;
-  color: #F65B17;
+  color: #7300ff;
 }
 main .skills .list-skills {
   width: 100%;
@@ -182,7 +176,7 @@ main .skills .list-skills {
   align-items: self-start;
 }
 main .skills .list-skills .list {
-  color: #F1F1F1;
+  color: #411D67;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -214,21 +208,22 @@ main .skills .button-projects {
 }
 main .skills .button-projects a {
   padding: 0.5em;
-  color: #F1F1F1;
-  border: 3px solid #F1F1F1;
+  color: #7300ff;
+  border: 3px solid #7300ff;
   border-radius: 5px;
   text-decoration: none;
   border-radius: 10px;
 }
 main .skills .button-projects a:hover {
-  background: #F1F1F1;
-  color: #F65B17;
+  background: #7300ff;
+  color: #f5f5f5;
   transition: all 0.1s ease;
 }
 main .contact {
   width: 100%;
   padding: 3em 1.5em;
-  border-bottom: 2px solid #F65B17;
+  background: #dedede;
+  border-bottom: 2px solid #411D67;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -239,28 +234,29 @@ main .contact .contact-title {
 }
 main .contact .contact-title h2 {
   text-align: center;
-  color: #F65B17;
+  color: #7300ff;
   margin-bottom: 1em;
 }
 main .contact .division {
   width: 100%;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-evenly;
   align-items: self-start;
 }
 main .contact .division .left-part {
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 main .contact .division .left-part h3 {
-  color: #F65B17;
+  color: #7300ff;
   margin-top: 13px;
 }
 main .contact .division .left-part p {
-  color: #F1F1F1;
+  color: #411D67;
 }
 main .contact .division .left-part .list-link-git li {
   list-style-type: none;
@@ -272,7 +268,7 @@ main .contact .division .left-part .list-link-git li a {
   margin-bottom: 0.2em;
   font-size: 16px;
   font-weight: 700;
-  color: #F1F1F1;
+  color: #411D67;
   text-align: center;
   text-decoration: none;
   border: 2px solid transparent;
@@ -282,10 +278,11 @@ main .contact .division .left-part .list-link-git li a svg {
   margin-right: 0.2em;
 }
 main .contact .division .left-part .list-link-git li a:hover {
-  color: #F65B17;
+  color: #7300ff;
   transition: all 0.1s ease;
 }
 main .contact .division .right-part {
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -293,13 +290,14 @@ main .contact .division .right-part {
 }
 main .contact .division .right-part .curriculum h3 {
   margin-top: 13px;
-  color: #F65B17;
+  color: #7300ff;
 }
 main .contact .division .right-part .curriculum a {
-  color: #F1F1F1;
+  color: #411D67;
   text-decoration: none;
 }
 main .contact .division .right-part .curriculum a:hover {
+  color: #7300ff;
   text-decoration: underline;
 }
 
@@ -307,7 +305,7 @@ footer {
   width: 100%;
   min-height: 5%;
   padding: 1em;
-  background: #000000;
+  background: #f5f5f5;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -321,7 +319,7 @@ footer .logo a {
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
-  color: #F65B17;
+  color: #7300ff;
 }
 footer .medias {
   width: 30%;
@@ -337,7 +335,7 @@ footer .medias .icons li {
   margin: 0 0.12em;
 }
 footer .medias .icons li a {
-  color: #F1F1F1;
+  color: #411D67;
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
@@ -347,7 +345,7 @@ footer .medias .icons li a {
   align-items: center;
 }
 footer .medias .icons li a:hover {
-  color: #F65B17;
+  color: #7300ff;
   transition: all 0.1s ease;
 }
 footer .copy {
@@ -356,14 +354,11 @@ footer .copy {
   justify-content: center;
 }
 footer .copy p {
-  color: #FFB26A;
+  color: #411D67;
   font-size: 10px;
 }
 
 @media (max-width: 557px) {
-  header .nav-bar .logo {
-    color: #F1F1F1;
-  }
   header .nav-bar .logo p {
     font-size: 22px;
   }
@@ -371,7 +366,6 @@ footer .copy p {
     width: 160px;
   }
   main .resume-me .text-right p {
-    color: #F1F1F1;
     font-size: 16px;
   }
   main .about-me h2 {
@@ -402,6 +396,12 @@ footer .copy p {
   }
   main .contact .contact-title h2 {
     font-size: 23px;
+  }
+  main .contact .division {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   main .contact .division .left-part h3 {
     font-size: 14px;

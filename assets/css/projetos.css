@@ -10,16 +10,15 @@
 body {
   min-width: 100%;
   min-height: 100%;
-  background: #000000;
+  background: #f5f5f5;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   position: relative;
 }
 
 header {
   width: 100%;
-  min-height: 5%;
-  background: #222222;
-  border-bottom: 2px solid #F65B17;
+  background: #f5f5f5;
+  border-bottom: 2px solid #411D67;
 }
 header .nav-bar {
   display: flex;
@@ -31,7 +30,7 @@ header .nav-bar .logo a {
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
-  color: #D46924;
+  color: #7300ff;
 }
 header .nav-bar .nav-list {
   list-style-type: none;
@@ -48,15 +47,15 @@ header .nav-bar .nav-list .nav-link {
 }
 header .nav-bar .nav-list .nav-link a {
   padding: 1em;
-  color: #F1F1F1;
+  color: #7300ff;
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.1s ease;
 }
 header .nav-bar .nav-list .nav-link a:hover {
-  background: #F1F1F1;
-  color: #F65B17;
+  background: #7300ff;
+  color: #f5f5f5;
   transition: all 0.1s ease;
 }
 
@@ -67,25 +66,24 @@ main {
 main .principal {
   width: 100%;
   padding: 3em 0;
-  border-bottom: 2px solid #F65B17;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 main .principal .title {
-  color: #F65B17;
+  color: #7300ff;
   text-align: center;
   margin: 1em 0;
 }
 main .principal .text {
   padding: 0 2em;
-  color: #F1F1F1;
+  color: #411D67;
   text-align: start;
 }
 main .project-parts {
   width: 100%;
-  border-bottom: 2px solid #F65B17;
-  background: #222222;
+  border-bottom: 2px solid #411D67;
+  background: #dedede;
 }
 main .project-parts .card-proj {
   width: 100%;
@@ -99,8 +97,8 @@ main .project-parts .card-proj .card {
   width: 380px;
   min-height: 480px;
   margin: 0.4em;
-  border: 1px solid #F65B17;
-  background: #000000;
+  border: 1px solid #411D67;
+  background: #f5f5f5;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
@@ -122,13 +120,13 @@ main .project-parts .card-proj .card .title {
   padding: 0 1rem;
 }
 main .project-parts .card-proj .card .title h2 {
-  color: #F65B17;
+  color: #7300ff;
   text-align: center;
 }
 main .project-parts .card-proj .card .btn-desc {
   width: 100%;
   margin: 0.2rem 0;
-  padding: 0 1rem;
+  padding: 0 0.2rem;
   display: flex;
   flex-direction: column;
 }
@@ -140,17 +138,18 @@ main .project-parts .card-proj .card .btn-desc .btn {
 }
 main .project-parts .card-proj .card .btn-desc .btn a {
   text-decoration: none;
-  color: #F1F1F1;
+  color: #411D67;
   margin: 0 0.5em 0;
-  padding: 0.2em 0.5em;
+  padding: 0.2em 0.4em;
   font-size: 16px;
   font-weight: 600;
-  border: 3px solid #F1F1F1;
+  border: 3px solid #411D67;
   border-radius: 5px;
 }
 main .project-parts .card-proj .card .btn-desc .btn a:hover {
-  background: #F1F1F1;
-  color: #F65B17;
+  background: #7300ff;
+  border: 3px solid #7300ff;
+  color: #f5f5f5;
   scale: 1.1;
   transition: all 0.1s ease;
 }
@@ -159,14 +158,14 @@ main .project-parts .card-proj .card .btn-desc .description {
   margin: 0.2rem 0;
 }
 main .project-parts .card-proj .card .btn-desc .description p {
-  color: #F1F1F1;
+  color: #411D67;
   font-size: 16px;
   text-align: center;
 }
 main .project-parts .card-proj .card .btn-desc .description p a {
   text-decoration: none;
   font-weight: 700;
-  color: #F1F1F1;
+  color: #7300ff;
 }
 main .project-parts .card-proj .card .btn-desc .description p a:hover {
   text-decoration: underline;
@@ -178,12 +177,16 @@ main .project-parts .card-proj .card .icons {
   flex-direction: row;
   justify-content: center;
 }
+main .project-parts .card-proj .card .icons box-icon {
+  width: 50px;
+  height: 50px;
+}
 
 footer {
   width: 100%;
   min-height: 5%;
   padding: 1em;
-  background: #000000;
+  background: #f5f5f5;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -197,7 +200,7 @@ footer .logo a {
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
-  color: #F65B17;
+  color: #7300ff;
 }
 footer .medias {
   width: 30%;
@@ -213,7 +216,7 @@ footer .medias .icons li {
   margin: 0 0.12em;
 }
 footer .medias .icons li a {
-  color: #F1F1F1;
+  color: #411D67;
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
@@ -223,7 +226,7 @@ footer .medias .icons li a {
   align-items: center;
 }
 footer .medias .icons li a:hover {
-  color: #F65B17;
+  color: #7300ff;
   transition: all 0.1s ease;
 }
 footer .copy {
@@ -232,13 +235,13 @@ footer .copy {
   justify-content: center;
 }
 footer .copy p {
-  color: #FFB26A;
+  color: #411D67;
   font-size: 10px;
 }
 
 @media (max-width: 557px) {
   header .nav-bar .logo {
-    color: #F1F1F1;
+    color: #411D67;
   }
   header .nav-bar .logo a {
     font-size: 20px;
