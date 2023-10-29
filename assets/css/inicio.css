@@ -495,8 +495,18 @@ footer .copy p {
   header .nav-bar .nav-list .nav-link a {
     font-size: 14px;
   }
+  main .resume-me {
+    display: flex;
+    flex-direction: column;
+  }
+  main .resume-me .photo-left {
+    margin: 0.5em 0;
+  }
   main .resume-me .photo-left img {
     width: 100px;
+  }
+  main .resume-me .text-right {
+    margin: 0.5em 0;
   }
   main .resume-me .text-right p {
     font-size: 12px;

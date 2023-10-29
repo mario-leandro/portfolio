@@ -722,13 +722,20 @@ footer {
 
     main {
         .resume-me {
+            display: flex;
+            flex-direction: column;
+
             .photo-left {
+                margin: .5em 0;
+
                 img {
                     width: 100px;
                 }
             }
 
             .text-right {
+                margin: .5em 0;
+                
                 p {
                     font-size: 12px;
                 }
